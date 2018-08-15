@@ -24,16 +24,18 @@ export class TodoDataService {
   }
 
   // Simulate DELETE /todos/:id
-  public deleteTodoById(id: number): TodoDataService {
-    this.todos = this.todos.filter(todo => todo.id !== id);
-    return this;
+  public deleteTodoById(todoId: number): void {
+    this._store.dispatch({
+      type: 'REMOVE_TODO',
+      payload: { id: todoId }
+    });
   }
 
-  public toggleTodoComplete(todo: Todo) {
-    let updatedTodo = this._updateTodoById(todo.id, {
-      complete: !todo.complete
+  public toggleTodoComplete(todoId: number): void {
+    this._store.dispatch({
+      type: 'TOGGLE_COMPLETE',
+      payload: { id: todoId }
     });
-    return updatedTodo;
   }
 
   public getCompleteTodos(): Todo[] {
