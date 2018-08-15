@@ -22,6 +22,7 @@ before_install:
 before_script:
   - npm install -g @angular/cli
   - npm install @ngrx/store --save
+  - npm install @ngrx/store-devtools --save
 
 script:
   - ng build --prod
