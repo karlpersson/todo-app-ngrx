@@ -2,10 +2,13 @@ import { TestBed, inject } from '@angular/core/testing';
 
 import { TodoDataService } from './todo-data.service';
 
+import {StoreModule} from '@ngrx/store';
+
 describe('TodoDataService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [TodoDataService]
+      providers: [TodoDataService],
+      imports:[StoreModule.forRoot({  })]
     });
   });
 
