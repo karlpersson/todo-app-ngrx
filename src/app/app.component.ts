@@ -15,7 +15,7 @@ export class AppComponent {
 
   public addTodo(): void {
     this.todoDataService.addTodo(this.newTodo);
-    this.newTodo = new Todo();
+    //this.newTodo = new Todo();
   }
 
   public toggleTodoComplete({id}): void {

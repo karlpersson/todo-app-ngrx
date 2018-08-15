@@ -47,17 +47,17 @@ export class TodoDataService {
   }
 
   // Simulate PUT /todos/:id
-  private _updateTodoById(id: number, values: Object = {}): Todo {
-    let todo = this._getTodoById(id);
-    if (!todo) {
-      return null;
-    }
-    Object.assign(todo, values);
-    return todo;
-  }
+  //private _updateTodoById(id: number, values: Object = {}): Todo {
+  //  let todo = this._getTodoById(id);
+  //  if (!todo) {
+  //    return null;
+  //  }
+  //  Object.assign(todo, values);
+  //  return todo;
+  //}
 
   // Simulate GET /todos/:id
-  private _getTodoById(id: number): Todo {
-    return this.todos.filter(todo => todo.id === id).pop();
-  }
+  //private _getTodoById(id: number): Todo {
+  //  return this.todos.filter(todo => todo.id === id).pop();
+  //}
 }
