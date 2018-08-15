@@ -18,12 +18,12 @@ export class AppComponent {
     this.newTodo = new Todo();
   }
 
-  public toggleTodoComplete(todo): void {
-    this.todoDataService.toggleTodoComplete(todo);
+  public toggleTodoComplete({id}): void {
+    this.todoDataService.toggleTodoComplete(id);
   }
 
-  public removeTodo(todo): void {
-    this.todoDataService.deleteTodoById(todo.id);
+  public removeTodo({id}): void {
+    this.todoDataService.deleteTodoById(id);
   }
 
   public allTodos(): number {
